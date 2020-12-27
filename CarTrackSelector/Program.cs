@@ -57,7 +57,6 @@ namespace CarTrackSelectorApp
             CarSelection.Add(car4);
             CarSelection.Add(car5);
 
-
             while (!endApp)
             {
                 string choice;
@@ -69,6 +68,8 @@ namespace CarTrackSelectorApp
                 Console.WriteLine("t: Add track");
                 Console.WriteLine("vc: View car list");
                 Console.WriteLine("vt: View track list");
+                Console.WriteLine("rc: Generate random car");
+                Console.WriteLine("rt: Generate random track");
                 Console.WriteLine("e: End app");
                 choice = Console.ReadLine();
                 if (choice == "c")
@@ -103,6 +104,23 @@ namespace CarTrackSelectorApp
                 {
                     endApp = true;
                     return;
+                } else if(choice == "rc")
+                {
+                    Car RandCar;
+                    var random = new Random();
+                    int randnum = random.Next(CarSelection.Count);
+                    RandCar = CarSelection[randnum];
+                    Console.WriteLine("Random Car: " + RandCar);
+                    Console.WriteLine("\n");
+                }
+                else if(choice == "rt")
+                {
+                    string RandTrack;
+                    var random = new Random();
+                    int randnum = random.Next(Tracks.Count);
+                    RandTrack = Tracks[randnum];
+                    Console.WriteLine("Random Track: " + RandTrack);
+                    Console.WriteLine("\n");
                 }
                 else
                 {
