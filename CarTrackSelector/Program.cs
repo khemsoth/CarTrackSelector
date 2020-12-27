@@ -42,6 +42,22 @@ namespace CarTrackSelectorApp
             List<Car> CarSelection = new List<Car>();
             List<string> Tracks = new List<string>();
             bool endApp = false;
+            string[] InitTracks = { "Nurburgring GP", "Circuit de Spa Francorchamps", "Mid-Ohio Sportscar Course", "Laguna Seca", "Kyalami" };
+            Tracks.AddRange(InitTracks);
+
+            Car car1 = new Car { Make = "Audi", Model = "R8 LMS GT3" };
+            Car car2 = new Car { Make = "BMW", Model = "M6 GT3" };
+            Car car3 = new Car { Make = "Bentley", Model = "Continental GT3" };
+            Car car4 = new Car { Make = "Honda", Model = "NSX GT3 Evo" };
+            Car car5 = new Car { Make = "Mercedes", Model = "AMG GT3" };
+
+            CarSelection.Add(car1);
+            CarSelection.Add(car2);
+            CarSelection.Add(car3);
+            CarSelection.Add(car4);
+            CarSelection.Add(car5);
+
+
             while (!endApp)
             {
                 string choice;
